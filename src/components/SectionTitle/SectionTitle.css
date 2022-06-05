@@ -1,0 +1,19 @@
+.section-title {
+    text-align: center;
+    font-family: Oxygen;
+    font-size: 20px;
+    margin-top: 0;
+    padding-top: 80px;
+    margin-bottom: 28px;
+}
+
+.section-title::after {
+    content: "";
+    position: relative;
+    height: 1px;
+    background: #DEDEDE;
+    width: 160px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 15px;
+}

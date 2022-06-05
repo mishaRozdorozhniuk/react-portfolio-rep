@@ -1,0 +1,24 @@
+.recent-photo {
+    width: 100%;
+}
+
+.recent__article-title,
+.recent__article-subtitle {
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+
+.recent__article-subtitle::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    display: block;
+    background-color: #EFEFEF;
+    left: 0;
+    margin-top: 10px;
+}
+
+.recent__article {
+    background-color: #fff;
+}

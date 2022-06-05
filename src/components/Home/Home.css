@@ -1,0 +1,77 @@
+.home {
+    background-image: url(../../img/IMAGE.png);
+    /* устанавливается фотография в качестве бэграунда */
+    background-repeat: no-repeat;
+    /* делаем так чтобы фотография не повторялась */
+    background-position: center center;
+    background-size: cover;
+    /* устанавливаем размер фотки рястянуто относительно размера экрана */
+    height: 500px;
+    margin: -16px;
+    overflow: hidden;
+}
+
+.home__content h1 {
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Lora', sans-serif;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.home__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 110px auto 0 auto;
+    margin-bottom: 30px;
+    /* внешние отступы вверх право вниз влево */
+}
+
+.home-height.home__content {
+    margin: 107px auto 0 auto;
+}
+
+.home__content p {
+    color: rgba(255, 255, 255, 0.63);
+    font-family: 'Oxygen', sans-serif;
+    /* используем раннее подключенные шрифты в index.html  */
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .home__content p {
+        text-align: center;
+    }
+    .home__content {
+        margin-top: 165px;
+    }
+}
+
+
+/*  */
+
+.home__content button {
+    font-family: 'Oxygen', sans-serif;
+    background: #DD783F;
+    border-radius: 3px;
+    /* радиус по углам */
+    border: none;
+    /* убираем бордер у кнопки */
+    padding: 14px 31px;
+    /* внутренние отступы сверху и снизу по 14 и слева и справа по 31 */
+    color: #fff;
+    font-weight: 400;
+    /* жирность текста */
+    margin-top: 10px;
+}
+
+.container {
+    max-width: 920px;
+    /* set max-width of container to restrict content  */
+    margin: 0 auto;
+    padding: 0 20px;
+}

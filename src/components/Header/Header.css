@@ -1,0 +1,114 @@
+header {
+    display: flex;
+    /* make elements in the row */
+    align-items: center;
+    /* add vertical centering */
+    justify-content: space-between;
+    /* element in different sides */
+    padding-top: 20px;
+}
+
+.header__list {
+    display: flex;
+}
+
+.header__item {
+    color: #fff;
+    text-transform: uppercase;
+    /* transform all words to uppercase */
+    list-style: none;
+    /* убать маркировку у списка */
+    margin: 0 0 0 80px;
+    /* spacing for top and bottom 0 and for left and right 40 */
+    font-size: 12px;
+    /* размер текста */
+    font-family: 'Oxygen', sans-serif;
+    /* import google fonts to project */
+}
+
+.header__logo {
+    color: #fff;
+    font-size: 30px;
+}
+
+.container {
+    max-width: 920px;
+    /* set max-width of container to restrict content  */
+    margin: 0 auto;
+}
+
+.burder-menu {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .burger-wrapper {
+        display: grid;
+    }
+    .burger-item::after {
+        position: absolute;
+        content: '';
+        width: 50px;
+        height: 2px;
+        background-color: #fff;
+    }
+    .burger-item:nth-child(1)::after {
+        top: 10px;
+    }
+    .burger-item:nth-child(2)::after {
+        top: 25px;
+    }
+    .burger-item:nth-child(3)::after {
+        top: 40px;
+    }
+    .burger-item-rotate.burger-item:nth-child(1)::after {
+        transform: rotate(45deg);
+        transition: all 1s ease;
+        top: 23px;
+    }
+    .burger-item-rotate.burger-item:nth-child(2) {
+        display: none;
+    }
+    .burger-item-rotate.burger-item:nth-child(3)::after {
+        transform: rotate(-45deg);
+        transition: all 1s ease;
+        top: 24px;
+        left: 5px;
+    }
+    .burder-menu {
+        display: block;
+        margin-left: auto;
+    }
+    .header__logo {
+        display: none;
+    }
+    header {
+        flex-direction: column;
+        display: none;
+    }
+    @keyframes mymove {
+        from {
+            right: -600px;
+        }
+        to {
+            right: -50px;
+        }
+    }
+    header.show-burger {
+        display: block;
+        position: relative;
+        animation: mymove 3s ease-out;
+        animation-fill-mode: forwards;
+    }
+    .header__list {
+        display: flex;
+        padding: 0;
+        width: 100%;
+        margin-top: -8px;
+    }
+    .header__item {
+        padding: 15px 10px 15px 10px;
+        margin: 0;
+        text-align: center;
+    }
+}

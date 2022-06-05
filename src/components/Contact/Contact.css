@@ -1,0 +1,97 @@
+.contact {
+    background-image: url(../../img/footer-img.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* устанавливает начинающюю позицию для изображения */
+    background-size: cover;
+    height: 500px;
+    /* высота картинки */
+    margin: -16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-inner {
+    flex: 1 1 auto;
+    /* по поводу этого не замарачивайся, это просто способ который я знаю чтобы прибить футер к низу страницы */
+    margin-top: 161px;
+}
+
+.contact h2 {
+    text-align: center;
+    /* текст по центру */
+    font-family: Oxygen;
+    font-size: 25px;
+    margin-top: 0;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+
+/* один из способов сделать полосочку под текстом как на макете используя псевдоелементы */
+
+.contact h2::after {
+    content: "";
+    position: relative;
+    height: 2px;
+    background: #fff;
+    width: 188px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.contact__input {
+    min-width: 324px;
+    /* минимальная ширина для инпута */
+    height: 50px;
+    border: none;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.contact__input[placeholder] {
+    /* обращаемся и стилизируем placeholder */
+    color: #817F83;
+    font-size: 12px;
+    padding: 0 0 0 50px;
+}
+
+.contact__button {
+    padding: 17px 36px;
+    border: none;
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 0px 3px 3px 0px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.footer-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(35, 47, 56, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+    .contact-inner>div {
+        display: flex;
+        flex-direction: column;
+        margin-left: 6px;
+    }
+    .contact__input {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .contact__input[placeholder] {
+        color: #817F83;
+        font-size: 12px;
+        padding: 0 0 0 30px;
+    }
+    .contact__input {
+        padding-left: 30px;
+    }
+}

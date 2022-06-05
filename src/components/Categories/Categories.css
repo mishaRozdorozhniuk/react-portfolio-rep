@@ -1,0 +1,27 @@
+.categories__item {
+    list-style: none;
+    color: #768088;
+    font-size: 14px;
+    font-family: Lora;
+}
+
+.categories__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.categories {
+    padding: 45px 0 30px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .categories__list {
+        flex-direction: column;
+        text-align: center;
+    }
+    .categories__item {
+        margin: 5px 0 5px 0;
+    }
+}

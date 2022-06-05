@@ -1,0 +1,49 @@
+.recent h2 {
+    text-align: center;
+    font-family: Oxygen;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 80px;
+}
+
+.recent {
+    background: #F7F7F7;
+    padding-bottom: 140px;
+}
+
+.recent__article {
+    display: inline-block;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.recent-article__inner {
+    padding: 15px;
+    background-color: #fff;
+}
+
+.recent__inner {
+    display: grid;
+    /* устанавливаем дисплей грид */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* в этой строке говориться - сделай мне сетку с елементами у которых минимальная ширина будет 290 пикселей а
+     максимальная 1 фракция (условная единица относительно ширины екрана) и auto-fit лучше загуглить там будет 
+     с демонстрацией лучше понятно, потому что есть еще auto-fill */
+    grid-gap: 20px;
+    /* отступы у елементов со всех сторон внутри грид сетки */
+}
+
+.recent__article-title {}
+
+.recent__article-subtitle {
+    color: #7A7A7A;
+    font-size: 13px;
+    font-family: Lora;
+}
+
+.article__author {
+    padding-top: 15px;
+}
